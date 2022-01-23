@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp_Task19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Task19"
+        xmlns:vm="clr-namespace:WpfApp_Task19.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <StackPanel>
+        <TextBlock Text="Радиус окружности"/>
+        <TextBox Text="{Binding Path=Radius}"/>
+        <Button Content="Вычислить" Command="{Binding Path=GetCircumferenceByRadiusCommand}"/>
+        <TextBlock Text="Длина окружности"/>
+        <TextBox Text="{Binding Path=Circumference}"/>
+    </StackPanel>
+</Window>
